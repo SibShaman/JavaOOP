@@ -3,10 +3,10 @@ package lesson1;
 public class Product {
     private int idProduct;
     private String name;
-    private int price;
+    private float price;
     private int count;
 
-    public Product(int idProduct, String name, int price, int count) {
+    public Product(int idProduct, String name, float price, int count) {
         this.idProduct = idProduct;
         this.name = name;
         this.price = price;
@@ -21,7 +21,7 @@ public class Product {
         return name;
     }
 
-    public int getPrice() {
+    public float getPrice() {
         return price;
     }
 

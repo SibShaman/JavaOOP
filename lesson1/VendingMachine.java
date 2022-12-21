@@ -5,15 +5,19 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class VendingMachine {
-    HashMap<Integer, Product> listProduct = new HashMap<>();
+    private ArrayList<Product> listProduct;
 
-    // мы должны как то добавить товар в сам автомат
-    public void addProduct(int id, Product product){
-      listProduct.put(id, product);
+    public VendingMachine (ArrayList<Product> listProduct) {
+      this.listProduct = listProduct;
+  }
+
+  // мы должны как то добавить товар в сам автомат
+    public void addProduct(Product product){
+      listProduct.add(product);
     }
 
     // покупатель должен ввести код товара
-    public int getIdProduct(){
+    private int getIdProduct(){
       Scanner inScanner = new Scanner(System.in);
       System.out.println("Введите номер товара который вы хотите приобрести: ");
       return inScanner.nextInt();
@@ -21,13 +25,15 @@ public class VendingMachine {
 
 
     // показать товар (номер, название, цена)
-    private HashMap<Integer, String> showProduct(Product product){
-      HashMap<Integer, String> buyProduct = new HashMap<>();
-      if (getIdProduct() == product.getIdProduct()){
-        buyProduct.put(product.getPrice(), product.getName());
-      }
-      return buyProduct;
-    }
+
+  // мне не нравится логика этого метода, вроде на выходе правильно, но на вход идет какая то херня
+//    public HashMap<Float, String> showProduct(Product product){
+//      HashMap<Float, String> buyProduct = new HashMap<>();
+//      if (getIdProduct() == product.getIdProduct()){
+//        buyProduct.put(product.getPrice(), product.getName());
+//      }
+//      return buyProduct;
+//    }
 
 
 
