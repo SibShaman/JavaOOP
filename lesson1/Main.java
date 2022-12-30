@@ -35,6 +35,10 @@ public class Main {
     vendingMachine.addProduct(new Product(5, "CocaCola", 56, 19));
 
 
+  }
+
+  public void showAllProduct(){
 
   }
+
 }

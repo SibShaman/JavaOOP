@@ -1,5 +1,7 @@
 package lesson1;
 
+import java.util.Objects;
+
 public class Product {
     private int idProduct;
     private String name;
@@ -29,6 +31,26 @@ public class Product {
         return count;
     }
 
+    public void setCount(int count) {
+        this.count = count;
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Product product = (Product) o;
+        return idProduct == product.idProduct && Float.compare(product.price, price) == 0
+            && count == product.count && Objects.equals(name, product.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idProduct, name, price, count);
+    }
 
 }
