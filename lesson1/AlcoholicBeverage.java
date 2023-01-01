@@ -1,18 +1,20 @@
 package lesson1;
 
-public class ColdBeverage extends Product{
+public class AlcoholicBeverage extends Product{
 
-  public ColdBeverage(int idProduct, String name, float price, int count) {
+  public AlcoholicBeverage(int idProduct, String name, float price, int count) {
     super(idProduct, name, price, count);
   }
 
   @Override
   public String toString() {
-    return "ColdBeverage{" +
+    return "AlcoholicBeverage{" +
         "idProduct=" + getIdProduct() +
         ", name='" + getName() + '\'' +
         ", price=" + getPrice() +
         ", count=" + getCount() +
         '}'+ "\n";
+
+
   }
 }

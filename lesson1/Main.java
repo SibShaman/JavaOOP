@@ -17,6 +17,7 @@ package lesson1;
 //Урок 1. Принципы ООП: Инкапсуляция, наследование, полиморфизм
 //При решении этих задач следуйте принципам абстракции, инкапсуляции, наследования, полиморфизма.
 //Создайте унаследованный класс ГорячийНапиток с дополнительным полем int температура.
+
 //Создайте класс АвтоматГорячихНапитков, реализующий интерфейс ТорговыйАвтомат и
 //        реализуйте перегруженный метод getProduct(int name, int volume, int temperature), выдающий продукт, соответствующий имени, объему и температуре.
 //В main проинициализируйте несколько ГорячихНапитков и АвтоматГорячихНапитков и позвольте покупателю купить товар.
@@ -28,11 +29,11 @@ public class Main {
 
   public static void main(String[] args) {
     VendingMachine vendingMachine = new VendingMachine(new ArrayList<>());
-    vendingMachine.addProduct(new ColdBeverage(1, "Milk", 98, 25));
+    vendingMachine.addProduct(new ColdBeverage(1, "MineralWater", 98, 25));
     vendingMachine.addProduct(new ColdBeverage(2, "Water", 66, 44));
-    vendingMachine.addProduct(new Product(3, "MineralWater", 105, 20));
-    vendingMachine.addProduct(new Product(4, "Beer", 100, 30));
-    vendingMachine.addProduct(new Product(5, "CocaCola", 56, 19));
+    vendingMachine.addProduct(new AlcoholicBeverage(3, "Cocktail", 105, 20));
+    vendingMachine.addProduct(new AlcoholicBeverage(4, "Beer", 100, 30));
+    vendingMachine.addProduct(new HotBeverage(5, "Coffee", 56, 19, 78));
 
     System.out.println(vendingMachine);
     int idMyProduct = vendingMachine.getProduct();
