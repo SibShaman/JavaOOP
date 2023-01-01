@@ -48,9 +48,7 @@ public class VendingMachine {
 // продать товар и выдать его покупателю
   public void sellProduct(int id){
     for (Product product : listProduct) {
-      if (product.getIdProduct() != id) {
-        continue;
-      } else {
+      if (product.getIdProduct() == id) {
         int count = product.getCount() - 1;
         product.setCount(count);
       }
