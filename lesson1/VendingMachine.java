@@ -55,7 +55,6 @@ public class VendingMachine {
     }
   }
 
-
   public void goodBay(){
     System.out.println("До свидания, приходите к нам еще");
   }
