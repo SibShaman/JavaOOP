@@ -28,17 +28,18 @@ public class Main {
 
   public static void main(String[] args) {
     VendingMachine vendingMachine = new VendingMachine(new ArrayList<>());
-    vendingMachine.addProduct(new Product(1, "Milk", 98, 25));
-    vendingMachine.addProduct(new Product(2, "Water", 66, 44));
+    vendingMachine.addProduct(new ColdBeverage(1, "Milk", 98, 25));
+    vendingMachine.addProduct(new ColdBeverage(2, "Water", 66, 44));
     vendingMachine.addProduct(new Product(3, "MineralWater", 105, 20));
     vendingMachine.addProduct(new Product(4, "Beer", 100, 30));
     vendingMachine.addProduct(new Product(5, "CocaCola", 56, 19));
 
+    System.out.println(vendingMachine);
+    int idMyProduct = vendingMachine.getProduct();
+    vendingMachine.showChosenProduct(idMyProduct);
+    vendingMachine.sellProduct(idMyProduct);
+    vendingMachine.goodBay();
+    System.out.printf("Остатки товаров в магазине = %s", vendingMachine);
 
   }
-
-  public void showAllProduct(){
-
-  }
-
 }
