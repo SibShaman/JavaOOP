@@ -2,7 +2,7 @@ package lesson1;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import org.jetbrains.annotations.NotNull;
+
 
 public class VendingMachine {
 
