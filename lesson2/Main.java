@@ -40,6 +40,7 @@ public class Main {
     allStudent.add(new Student("Мария", "Кузнецова", 5.0F));
     allStudent.add(new Student("Степан", "Кузьмин", 3.6F));
 
+    Student test = new Student("тест", "тестовый", 3.6F);
 
   }
 

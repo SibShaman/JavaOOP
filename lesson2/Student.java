@@ -11,6 +11,18 @@ public class Student {
     this.AverageGrade = AverageGrade;
   }
 
+  public String getFirstName() {
+    return FirstName;
+  }
+
+  public String getSecondName() {
+    return SecondName;
+  }
+
+  public float getAverageGrade() {
+    return AverageGrade;
+  }
+
   @Override
   public String toString() {
     return "Student{" +
