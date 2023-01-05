@@ -30,9 +30,16 @@ package lesson2;
 //<grade>3.6</grade>
 //</student>
 
+import java.util.ArrayList;
+
 public class Main {
 
   public static void main(String[] args) {
+    ArrayList<Student> allStudent = new ArrayList<>();
+    allStudent.add(new Student("Иван", "Иванов", 4.8F));
+    allStudent.add(new Student("Мария", "Кузнецова", 5.0F));
+    allStudent.add(new Student("Степан", "Кузьмин", 3.6F));
+
 
   }
 
