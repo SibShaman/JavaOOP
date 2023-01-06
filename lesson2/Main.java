@@ -41,14 +41,11 @@ public class Main {
     allStudent.add(new Student("Степан", "Кузьмин", 3.6F));
 
     WriterInFileInterface jsonFile = new JsonWriter();
-
+    WriterInFileInterface txtFile = new TXTWriter();
 
     for (Student student: allStudent) {
-      jsonFile.SaveAs(student, "lesson2/file.json");
+      jsonFile.SaveAs(student, "lesson2/fileOne.json");
+      txtFile.SaveAs(student, "lesson2/fileTwo.txt");
     }
-
-
-
   }
-
 }
