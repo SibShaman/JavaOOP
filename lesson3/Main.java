@@ -36,8 +36,9 @@ public class Main {
     StudentGroup studentGroup = new StudentGroup(list);
         for (Student student : studentGroup ) {
             System.out.println(student);
-        }
 
+        }
+    System.out.println();
 //    Iterator<Student> iter = list.iterator();
 //    while (iter.hasNext()) {
 //      System.out.println(iter.next());
@@ -47,6 +48,7 @@ public class Main {
     while (test.hasNext()){
       System.out.println(test.next());
     }
+    System.out.println();
     while (test.hasPrevious()){
       System.out.println(test.previous());
     }
