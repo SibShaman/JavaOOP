@@ -2,6 +2,7 @@ package lesson3;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class StudentGroup implements Iterable<Student> {
     private List<Student> studentList;
@@ -22,4 +23,10 @@ public class StudentGroup implements Iterable<Student> {
     public Iterator<Student> iterator() {
         return studentList.iterator();
     }
+
+    public ListIterator<Student> listIterator(){
+        return studentList.listIterator();
+    }
+
+
 }

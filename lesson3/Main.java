@@ -15,8 +15,6 @@ package lesson3;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 
@@ -35,16 +33,20 @@ public class Main {
 
 
     StudentGroup studentGroup = new StudentGroup(list);
+        for (Student student : studentGroup ) {
+            System.out.println(student);
+        }
 
-//        for (Student student : studentGroup ) {
-//            System.out.println(student);
-//        }
+//    Iterator<Student> iter = list.iterator();
+//    while (iter.hasNext()) {
+//      System.out.println(iter.next());
+//    }
+//    ListIterator<Student> test = studentGroup.listIterator();
+//    while (test.hasNext()){
+//      System.out.println(test.next());
+//    }
 
-    Iterator<Student> iter = list.iterator();
 
-    while (iter.hasNext()) {
-      System.out.println(iter.next());
-    }
   }
 
 }
