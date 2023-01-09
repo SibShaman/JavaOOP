@@ -16,6 +16,7 @@ package lesson3;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 
 public class Main {
@@ -41,11 +42,14 @@ public class Main {
 //    while (iter.hasNext()) {
 //      System.out.println(iter.next());
 //    }
-//    ListIterator<Student> test = studentGroup.listIterator();
-//    while (test.hasNext()){
-//      System.out.println(test.next());
-//    }
 
+    ListIterator<Student> test = studentGroup.listIterator();
+    while (test.hasNext()){
+      System.out.println(test.next());
+    }
+    while (test.hasPrevious()){
+      System.out.println(test.previous());
+    }
 
   }
 
