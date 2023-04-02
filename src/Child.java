@@ -19,9 +19,8 @@ public class Child extends Family {
         return nameMother;
     }
 
-    @Override
-    public ArrayList<Male> GetDataFamilyMember() {
-        ArrayList<Male> listMan = new ArrayList<>();
+    public ArrayList<Child> GetDataFamilyMember() {
+        ArrayList<Child> listMan = new ArrayList<>();
         Scanner dataMan = new Scanner(System.in);
         System.out.println("Введите имя");
         String firstName = dataMan.nextLine();

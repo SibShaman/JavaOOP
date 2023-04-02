@@ -13,7 +13,6 @@ public class Male extends Family {
         return nameWife;
     }
 
-    @Override
     public ArrayList<Male> GetDataFamilyMember() {
         ArrayList<Male> listMan = new ArrayList<>();
         Scanner dataMan = new Scanner(System.in);

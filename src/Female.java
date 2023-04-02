@@ -14,9 +14,8 @@ public class Female extends Family {
         return nameHusband;
     }
 
-    @Override
-    public ArrayList<Male> GetDataFamilyMember() {
-        ArrayList<Male> listMan = new ArrayList<>();
+    public ArrayList<Female> GetDataFamilyMember() {
+        ArrayList<Female> listMan = new ArrayList<>();
         Scanner dataMan = new Scanner(System.in);
         System.out.println("Введите имя");
         String firstName = dataMan.nextLine();

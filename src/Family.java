@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public abstract class Family {
 
@@ -21,5 +20,5 @@ public abstract class Family {
     public int getAge() {
         return age;
     }
-    public abstract ArrayList<Male> GetDataFamilyMember();
+
 }
