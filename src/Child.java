@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Child extends Family {
     private String nameFather;
     private String nameMother;
@@ -14,5 +17,22 @@ public class Child extends Family {
 
     public String getNameMother() {
         return nameMother;
+    }
+
+    @Override
+    public ArrayList<Male> GetDataFamilyMember() {
+        ArrayList<Male> listMan = new ArrayList<>();
+        Scanner dataMan = new Scanner(System.in);
+        System.out.println("Введите имя");
+        String firstName = dataMan.nextLine();
+        System.out.println("Введите фамилиию");
+        String secondName = dataMan.nextLine();
+        System.out.println("Введите возраст");
+        int age = dataMan.nextInt();
+        System.out.println("Введите имя отца");
+        String nameFather = dataMan.nextLine();
+        System.out.println("Введите имя матери");
+        String nameMother = dataMan.nextLine();
+        return listMan;
     }
 }
