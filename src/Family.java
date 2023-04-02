@@ -2,17 +2,23 @@ public abstract class Family {
 
     private String firstName;
     private String secondName;
-    private String mother;
-    private String father;
     private int age;
 
-    private enum gender {Male, Female}
+    public Family(String firstName, String secondName, int age) {
+        this.firstName = firstName;
+        this.secondName = secondName;
+        this.age = age;
+    }
 
+    public String getFirstName() {
+        return firstName;
+    }
 
-    abstract void GetAllParent(String mother, String father);
+    public String getSecondName() {
+        return secondName;
+    }
 
-    abstract void GetAllFamily(String mother, String father);
-
-    abstract void GetAgeParent(String mother, String father);
-
+    public int getAge() {
+        return age;
+    }
 }
