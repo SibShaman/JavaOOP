@@ -1,29 +1,39 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Objects;
 
 public class Male extends Family {
     private String nameWife;
 
-    public Male(String firstName, String secondName, int age, String nameWife) {
-        super(firstName, secondName, age);
+    public Male(String firstName, String secondName, String nameFather, String nameMother, int age, String nameWife) {
+        super(firstName, secondName, nameFather, nameMother, age);
         this.nameWife = nameWife;
+    }
+
+    public Male(String firstName, String secondName, String nameFather, String nameMother, int age) {
+        super(firstName, secondName, nameFather, nameMother, age);
     }
 
     public String getNameWife() {
         return nameWife;
     }
 
-    public ArrayList<Male> GetDataFamilyMember() {
-        ArrayList<Male> listMan = new ArrayList<>();
-        Scanner dataMan = new Scanner(System.in);
-        System.out.println("Введите имя");
-        String firstName = dataMan.nextLine();
-        System.out.println("Введите фамилиию");
-        String secondName = dataMan.nextLine();
-        System.out.println("Введите возраст");
-        int age = dataMan.nextInt();
-        System.out.println("Введите имя жены");
-        String nameWife = dataMan.nextLine();
-        return listMan;
+    @Override
+    public String toString() {
+        return "Male{" +
+                "nameWife='" + nameWife + '\'' +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Male male = (Male) o;
+        return nameWife.equals(male.nameWife);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), nameWife);
     }
 }
