@@ -13,15 +13,23 @@ public class Female extends Family {
         super(firstName, secondName, nameFather, nameMother, age);
     }
 
+    public Female() {
+
+    }
+
     public String getNameHusband() {
         return nameHusband;
+    }
+
+    public void setNameHusband(String nameHusband) {
+        this.nameHusband = nameHusband;
     }
 
     @Override
     public String toString() {
         return "Female{" +
                 "nameHusband='" + nameHusband + '\'' +
-                '}';
+                "} " + super.toString();
     }
 
     @Override

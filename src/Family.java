@@ -1,13 +1,16 @@
 import java.util.Objects;
 
-public abstract class Family {
+public abstract class Family extends CreatorFamily {
 
     private String firstName;
     private String secondName;
-
     private String nameFather;
     private String nameMother;
     private int age;
+
+
+    public Family() {
+    }
 
     public Family(String firstName, String secondName, String nameFather, String nameMother, int age) {
         this.firstName = firstName;
@@ -35,6 +38,26 @@ public abstract class Family {
 
     public int getAge() {
         return age;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public void setNameFather(String nameFather) {
+        this.nameFather = nameFather;
+    }
+
+    public void setNameMother(String nameMother) {
+        this.nameMother = nameMother;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     @Override
