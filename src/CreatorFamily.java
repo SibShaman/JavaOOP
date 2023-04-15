@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CreatorFamily implements FamilyInterface{
+public class CreatorFamily <U>{
 
-    @Override
-    public ArrayList<Family> addMemberMan(ArrayList<Family> family) {
+    public ArrayList<U> addMemberMan(ArrayList<U> family) {
 
         Male father = new Male();
 
@@ -33,8 +32,8 @@ public class CreatorFamily implements FamilyInterface{
         return family;
     }
 
-    @Override
-    public ArrayList<Family> addMemberWoman(ArrayList<Family> family) {
+
+    public ArrayList<U> addMemberWoman(ArrayList<U> family) {
         Female mother = new Female();
 
         Scanner sc = new Scanner(System.in);

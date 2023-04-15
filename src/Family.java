@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public abstract class Family extends CreatorFamily {
+public class Family <U extends CreatorFamily> {
 
     private String firstName;
     private String secondName;
