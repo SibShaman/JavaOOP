@@ -1,4 +1,4 @@
-package FamilyGroup;
+package allProject.FamilyGroup;
 
 import java.util.Objects;
 
@@ -62,7 +62,7 @@ public abstract class MemberFamily {
 
     @Override
     public String toString() {
-        return "FamilyGroup.MemberFamily{" +
+        return "allProject.FamilyGroup.MemberFamily{" +
                 "firstName='" + firstName + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", nameFather='" + nameFather + '\'' +

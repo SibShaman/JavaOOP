@@ -1,12 +1,14 @@
-package FamilyGroup;
+package allProject.FamilyGroup;
+
+import allProject.AddFamilyInterface;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class Family <U extends MemberFamily>  implements AddFamilyInterface {
-
-    public ArrayList<U> addMan(ArrayList<U> allFamily) {
+public abstract class Family <U extends MemberFamily>  implements AddFamilyInterface {
+    @Override
+    public ArrayList<Object> addMan(ArrayList<Object> allFamily) {
 
         Male father = new Male();
 
@@ -31,12 +33,12 @@ public class Family <U extends MemberFamily>  implements AddFamilyInterface {
         father.setAge(age);
         father.setNameWife(nameWife);
 
-        allFamily.add((U) father);
+        allFamily.add(father);
 
         return allFamily;
     }
-
-    public ArrayList<U> addWoman(ArrayList<U> allFamily) {
+    @Override
+    public ArrayList<Object> addWoman(ArrayList<Object> allFamily) {
 
         Female mother = new Female();
 
@@ -61,7 +63,7 @@ public class Family <U extends MemberFamily>  implements AddFamilyInterface {
         mother.setAge(age);
         mother.setNameHusband(nameHusband);
 
-        allFamily.add((U) mother);
+        allFamily.add(mother);
 
         return allFamily;
 

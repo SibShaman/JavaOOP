@@ -1,18 +1,20 @@
 /*
 *
-*  public class FamilyGroup.Family <U extends  FamilyGroup.MemberFamily>
+*  public class allProject.FamilyGroup.Family <U extends  allProject.FamilyGroup.MemberFamily>
 *
-*  abstract class FamilyGroup.MemberFamily
+*  abstract class allProject.FamilyGroup.MemberFamily
 *
-*  public class FamilyGroup.Female extends FamilyGroup.MemberFamily
+*  public class allProject.FamilyGroup.Female extends allProject.FamilyGroup.MemberFamily
 *
-*  public class FamilyGroup.Male extends FamilyGroup.MemberFamily
+*  public class allProject.FamilyGroup.Male extends allProject.FamilyGroup.MemberFamily
 *
 * */
 
-import FamilyGroup.Family;
-import FamilyGroup.Female;
-import FamilyGroup.Male;
+import allProject.AddFamilyInterface;
+import allProject.Builder;
+import allProject.FamilyGroup.Family;
+import allProject.FamilyGroup.Female;
+import allProject.FamilyGroup.Male;
 
 import java.util.ArrayList;
 
@@ -20,18 +22,12 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-    ArrayList<Male> allMan = new ArrayList<>();
-    ArrayList<Female> allWomen = new ArrayList<>();
+    ArrayList<Object> allFamily = new ArrayList<>();
+    AddFamilyInterface family = new Family<>() {};
+    Builder builder = new Builder(family, allFamily);
 
-
-    Family<Male> man = new Family<>();
-    man.addMan(allMan);
-    System.out.println(allMan);
-
-    Family<Female> women = new Family<>();
-    women.addWoman(allWomen);
-    System.out.println(allWomen);
-
+    builder.create();
+        System.out.println(allFamily);
     }
 }
 

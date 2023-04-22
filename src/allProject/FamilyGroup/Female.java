@@ -1,16 +1,16 @@
-package FamilyGroup;
+package allProject.FamilyGroup;
 
 import java.util.Objects;
 
-public class Male extends MemberFamily {
-    private String nameWife;
-    public Male() {
+public class Female extends MemberFamily {
+    private String nameHusband;
+    public Female() {
         super();
     }
 
-    public Male(String firstName, String secondName, String nameFather, String nameMother, int age, String nameWife) {
+    public Female(String firstName, String secondName, String nameFather, String nameMother, int age, String nameHusband) {
         super(firstName, secondName, nameFather, nameMother, age);
-        this.nameWife = nameWife;
+        this.nameHusband = nameHusband;
     }
 
     @Override
@@ -38,8 +38,6 @@ public class Male extends MemberFamily {
         return super.getNameFather();
     }
 
-
-
     @Override
     public void setNameFather(String nameFather) {
         super.setNameFather(nameFather);
@@ -65,12 +63,12 @@ public class Male extends MemberFamily {
         super.setAge(age);
     }
 
-    public String getNameWife() {
-        return nameWife;
+    public String getNameHusband() {
+        return nameHusband;
     }
 
-    public void setNameWife(String nameWife) {
-        this.nameWife = nameWife;
+    public void setNameHusband(String nameHusband) {
+        this.nameHusband = nameHusband;
     }
 
     @Override
@@ -78,23 +76,19 @@ public class Male extends MemberFamily {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Male male = (Male) o;
-        return Objects.equals(nameWife, male.nameWife);
+        Female female = (Female) o;
+        return Objects.equals(nameHusband, female.nameHusband);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), nameWife);
+        return Objects.hash(super.hashCode(), nameHusband);
     }
 
     @Override
     public String toString() {
-        return "FamilyGroup.Male{" +
-                "nameWife='" + nameWife + '\'' +
+        return "allProject.FamilyGroup.Female{" +
+                "nameHusband='" + nameHusband + '\'' +
                 "} " + super.toString();
     }
-
-
-
-
 }
