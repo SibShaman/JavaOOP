@@ -26,7 +26,7 @@ public class Main {
     AddFamilyInterface family = new Family<>() {};
     Builder builder = new Builder(family, allFamily);
 
-    builder.create();
+    builder.createMan();
         System.out.println(allFamily);
     }
 }

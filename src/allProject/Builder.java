@@ -13,7 +13,7 @@ public class Builder {
         this.listTree = listTree;
     }
 
-    public ArrayList<Object> create(){
+    public ArrayList<Object> createMan(){
         return builder.addMan(listTree);
     }
 
